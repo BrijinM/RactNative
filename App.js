@@ -7,6 +7,7 @@
  */
 
 import React, { Component, useState } from 'react';
+import { StackNavigator } from 'react-navigation';
 
 import {
   SafeAreaView,
@@ -27,7 +28,13 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import SplashScreen from 'react-native-splash-screen';
 
+
+// editUser = () => {
+//   // this.props.navigation.navigate("Screen");
+//   alert('addfgfd')
+//       };
 const App: () => React$Node = () => {
 	 const [text, setText] = useState('');
   return (
@@ -50,9 +57,7 @@ const App: () => React$Node = () => {
       </Text>
     </View>
           <Button
-					  onPress={() => {
-					    alert('You tapped the buttonJesus!');
-					  }}
+					  onPress={(navigation) => navigation.navigate('Home')}
 					  title="Press Me"
 					/>
 
